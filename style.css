@@ -1109,6 +1109,22 @@ a {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .pillars-grid .pillar-box:nth-child(5):last-child {
+    grid-column: 1 / -1;
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
 .pillar-box {
   background: var(--white);
   border-radius: var(--radius-lg);
@@ -1378,6 +1394,33 @@ a {
   line-height: 1.6;
   margin-bottom: 0;
   flex-grow: 1;
+}
+
+.doctors-support-wrap {
+  margin: 0 auto 48px;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.doctors-support-sentence {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--teal-50);
+  border: 1px solid rgba(0, 92, 83, 0.14);
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--teal-900);
+  line-height: 1.5;
+  box-shadow: 0 4px 16px rgba(0, 92, 83, 0.04);
+  text-align: center;
+}
+
+[dir="rtl"] .doctors-support-sentence {
+  font-family: var(--font-arabic);
 }
 
 /* ==========================================================================
