@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5173;
 const BASE_DIR = __dirname;
 
 const MIME_TYPES = {
@@ -73,6 +73,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server successfully started on port ${PORT}`);
+server.listen(PORT, '127.0.0.1', () => {
+  console.log(`Server successfully started at http://localhost:${PORT}/`);
 });
